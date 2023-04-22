@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="chatbox">
+      <form method="POST" action="">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+      </form>
+      <h3>{{ message }}</h3>
+    </div>
+{% endblock %}

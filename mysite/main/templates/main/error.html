@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+    <h1>ERROR PAGE</h1>
+</header>
+<body>
+    <div>
+        <h3>{{ random_capcha }}</h3>
+        <p>Enter capcha</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="capcha" id="">
+            <button type="submit">Enter</button>
+        </form>
+        <h5>{{ message }}</h5>
+        <h5>{{ random_capcha }}</h5>
+    </div>
+</body>
+</html>
